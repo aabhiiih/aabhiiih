@@ -1,0 +1,26 @@
+name: Generate Snake Contribution Grid
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Generate Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: "aabhiiih"
+          outputs: "github-contribution-grid-snake.svg, github-contribution-grid-snake-dark.svg"
+
+      - name: Commit and Push
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Updated snake animation"
+          default_author: github_actions
+          add: "output/github-contribution-grid-snake.svg output/github-contribution-grid-snake-dark.svg"
