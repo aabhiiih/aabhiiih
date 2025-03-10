@@ -1,0 +1,23 @@
+name: Generate Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs every day at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate the Contribution Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: aabhiiih
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+      - name: Push the generated snake image
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-snake
+          path: dist
