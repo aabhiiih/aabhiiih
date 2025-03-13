@@ -1,7 +1,7 @@
 ## Skills
 - **Languages**: Python,HTML
-- **Frameworks**: React, Streamlit, Flask
-- **Tools**: Git, VS Code
+- **Frameworks**: Streamlit, Flask
+- **Tools**: Jupyter Notebook, VS Code
 
 <div align="center"> 
   <p>Visitor count</p>
