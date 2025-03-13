@@ -34,9 +34,5 @@
 
 <hr>
 
-## 🐍 My Contributions
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/aabhiiih/aabhiiih/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake"/>
-</div>
 
